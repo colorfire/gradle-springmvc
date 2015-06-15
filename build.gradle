@@ -1,0 +1,42 @@
+//scaffold 脚本
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'eclipse-wtp'
+apply plugin: 'war'
+apply plugin: 'jetty'
+
+version = '1.0'
+sourceCompatibility = 1.7
+
+sourceSets {
+  main {
+    java { srcDir 'src/main/java' }
+    resources { srcDirs 'src/main/resources' }
+  }
+}
+
+repositories {
+  mavenLocal()
+  mavenCentral()
+  maven { url "http://maven.oschina.net/content/groups/public/" } // oschina的maven私服
+}
+
+dependencies {
+  def springVersion = "4.0.1.RELEASE"
+  def springSercurityVersion = "3.2.5.RELEASE"
+
+  compile 'jstl:jstl:1.2'
+  compile 'org.springframework:spring-webmvc:4.0.1.RELEASE'
+  compile 'org.springframework:spring-context-support:4.0.1.RELEASE'
+  compile 'org.springframework.security:spring-security-web:3.2.5.RELEASE'
+  compile "org.slf4j:slf4j-log4j12:1.7.12"
+
+  runtime 'org.slf4j:slf4j-api:1.7.10'
+  providedCompile 'javax.servlet:servlet-api:2.5'
+}
+
+// jetty服务器热部署，自动刷新资源
+jettyRun {
+  reload = 'manual'
+  contextPath = ''
+}

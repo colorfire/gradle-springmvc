@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>您访问的找不到</title>
+<style type="text/css">
+/*404*/
+.er_404 {
+  width: 800px;
+  height: 400px;
+  background: url(../images/404.gif) no-repeat 0 0;
+  position: relative;
+  margin: 200px auto 0;
+  font-size: 14px;
+  color: #4d4d4d;
+}
+
+.er_not {
+  width: 300px;
+  position: absolute;
+  top: 135px;
+  left: 420px;
+  display: block;
+}
+
+.er_btn {
+  width: 250px;
+  position: absolute;
+  height: 33px;
+  left: 420px;
+  top: 220px;
+}
+
+.er_retern {
+  background: url(../images/404btn.gif) no-repeat 0 0;
+  width: 112px;
+  height: 33px;
+  cursor: pointer;
+}
+
+.er_retern_index {
+  background: url(../images/404btn1.gif) no-repeat 0 0;
+}
+
+.er_foot {
+  width: 400px;
+  position: absolute;
+  bottom: 17px;
+  left: 226px;
+}
+/*404_1*/
+.er_404_1 {
+  width: 900px;
+  height: 600px;
+  background: url(../images/4041.gif) no-repeat 0 0;
+}
+
+.er_btn1 {
+  top: 395px;
+  left: 438px;
+}
+
+.er_not1 {
+  top: 455px;
+  left: 438px;
+  line-height: 26px;
+}
+.error-phone{
+  margin-top:20px;
+}
+</style>
+</head>
+<body style="background-color: #282828;">
+  <div class="er_404">
+    <div class="er_not">
+      对不起，您要找的页面没有找到，系统将自动<br /> <a href="../index.html" class="orange">跳转到首页</a>，或者你可以选择以下方式：
+      <div class="error-phone">客服电话:400-1613-118</div>
+    </div>
+    <div class="er_btn">
+      <input type="button" name="" value="" class="er_retern" onclick="history.go(-1);" />&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="button" name="" value="" class="er_retern er_retern_index" onclick="window.location.href='${base}/index'" />
+    </div>
+    <div class="er_foot">
+      出错了，请<a href="${base}/toAboutPage?aboutType=5" class="orange">联系客服</a>帮您解决问题或者返回首页继续浏览
+    </div>
+  </div>
+</body>
+</html>
